@@ -1,5 +1,7 @@
 ﻿using Prism.Unity;
 using Day3.Views;
+using Day3.Services;
+using Microsoft.Practices.Unity;
 
 namespace Day3
 {
@@ -11,12 +13,13 @@ namespace Day3
 		{
 			InitializeComponent();
 
-			NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+			NavigationService.NavigateAsync("MainPage");
 		}
 
 		protected override void RegisterTypes()
 		{
 			Container.RegisterTypeForNavigation<MainPage>();
+			Container.RegisterType<AzureService, AzureService>();
 		}
 	}
 }
