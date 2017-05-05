@@ -50,6 +50,17 @@
 				HorizontalOptions="FillAndExpand" 
 				Command="{Binding SaveCustomer}" 
 			 />
+
+		<Button x:Name="btnSync" 
+				Text="Sync" 
+				FontSize="14"
+				HeightRequest="40"
+				Margin="20,0,20,10" 
+				BackgroundColor="#DCDCDC" 
+				TextColor="Black" 
+				HorizontalOptions="FillAndExpand" 
+				Command="{Binding SyncCustomers}" 
+			 />
 			 	
 			<ListView x:Name="lstCustomers"
 				Margin="1,20,1,1" 

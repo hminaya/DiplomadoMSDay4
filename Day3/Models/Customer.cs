@@ -8,13 +8,13 @@ namespace Day3.Models
 	public class Customer : BindableBase
 	{
 
-		[JsonProperty("id")]
+		[JsonProperty(PropertyName ="id")]
 		public string id { get; set; }
 
-		[JsonProperty("name")]
+		[JsonProperty(PropertyName ="name")]
 		public string name { get; set; }
 
-		[JsonProperty("email")]
+		[JsonProperty(PropertyName ="email")]
 		public string email { get; set; }
 
 

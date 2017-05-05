@@ -8,6 +8,8 @@ using Prism;
 using Prism.Unity;
 using UIKit;
 
+using Microsoft.WindowsAzure.MobileServices;
+
 namespace Day3.iOS
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the 
