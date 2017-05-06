@@ -29,6 +29,8 @@ namespace Day3.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
+			Microsoft.WindowsAzure.MobileServices.CurrentPlatform.Init();
+
 			LoadApplication(new App(new iOSInitializer()));
 
 			return base.FinishedLaunching(app, options);
