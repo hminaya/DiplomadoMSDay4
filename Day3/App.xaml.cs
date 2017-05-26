@@ -1,9 +1,9 @@
 ﻿using Prism.Unity;
-using Day3.Views;
-using Day3.Services;
+using Day4.Views;
+using Day4.Services;
 using Microsoft.Practices.Unity;
 
-namespace Day3
+namespace Day4
 {
 	public partial class App : PrismApplication
 	{

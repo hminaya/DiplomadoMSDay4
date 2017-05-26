@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace Day3.Views
+namespace Day4.Views
 {
 	public partial class MainPage : ContentPage
 	{

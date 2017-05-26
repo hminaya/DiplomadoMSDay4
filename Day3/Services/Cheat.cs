@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Day3
+namespace Day4
 {
 	public class Cheat
 	{

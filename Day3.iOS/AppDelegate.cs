@@ -10,7 +10,7 @@ using UIKit;
 
 using Microsoft.WindowsAzure.MobileServices;
 
-namespace Day3.iOS
+namespace Day4.iOS
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the 
 	// User Interface of the application, as well as listening (and optionally responding) to 

@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Prism.Mvvm;
 
-namespace Day3.Models
+namespace Day4.Models
 {
 	[JsonObject(Title = "customers")]
 	public class Customer : BindableBase

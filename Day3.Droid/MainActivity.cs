@@ -11,16 +11,33 @@ using Prism;
 using Prism.Unity;
 using Microsoft.Practices.Unity;
 
-namespace Day3.Droid
+using Gcm.Client;
+
+namespace Day4.Droid
 {
-	[Activity(Label = "Day3.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity(Label = "Day4", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
+        public static MainActivity CurrentActivity { get; private set; }
+
 		protected override void OnCreate(Bundle bundle)
 		{
+            CurrentActivity = this;
+
 			base.OnCreate(bundle);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
+
+			try
+			{
+				GcmClient.CheckDevice(this);
+				GcmClient.CheckManifest(this);
+				GcmClient.Register(this, PushHandlerBroadcastReceiver.SENDER_IDS);
+			}
+			catch (Exception ex)
+	        {
+                Console.WriteLine($"[=================================] {ex.ToString()}");
+	        }
 
 			LoadApplication(new App(new AndroidInitializer()));
 		}
